@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:backgroundTint="#FFEB3B"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/btnBorrar"
+        android:layout_width="136dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="319dp"
+        android:backgroundTint="#3F51B5"
+        android:onClick="Borrar"
+        android:text="Borrar"
+        android:textColor="#0A0A10"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="÷"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textView4"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnDividir"
+        android:layout_width="0dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginEnd="23dp"
+        android:backgroundTint="#768AE0"
+        android:onClick="Calcular"
+        android:text="÷"
+        android:textColor="#0A0A10"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btnMultiplicar"
+        app:layout_constraintEnd_toEndOf="@+id/result"
+        app:layout_constraintStart_toEndOf="@+id/btnMultiplicar" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="÷"
+        app:layout_constraintStart_toStartOf="@+id/textView5"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnRestar"
+        android:layout_width="75dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="89dp"
+        android:layout_marginTop="41dp"
+        android:layout_marginEnd="91dp"
+        android:layout_marginBottom="40dp"
+        android:backgroundTint="#768AE0"
+        android:onClick="Calcular"
+        android:text="-"
+        android:textColor="#0A0A10"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/btnBorrar"
+        app:layout_constraintEnd_toEndOf="@+id/btnMultiplicar"
+        app:layout_constraintStart_toStartOf="@+id/btnSumar"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="19dp"
+        android:text="Calculadora básica"
+        android:textAllCaps="true"
+        android:textColor="#3F51B5"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="14dp"
+        android:text="Número 1"
+        android:textColor="#01013A"
+        android:textColorHighlight="#2315A8"
+        android:textColorHint="#020818"
+        app:layout_constraintBaseline_toBaselineOf="@+id/num1"
+        app:layout_constraintEnd_toStartOf="@+id/num1"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Número 2"
+        android:textColor="#01013A"
+        app:layout_constraintBaseline_toBaselineOf="@+id/num2"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/num1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="29dp"
+        android:layout_marginEnd="12dp"
+        android:ems="10"
+        android:inputType="text"
+        app:layout_constraintEnd_toStartOf="@+id/result"
+        app:layout_constraintStart_toEndOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <EditText
+        android:id="@+id/num2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="12dp"
+        android:ems="10"
+        android:inputType="text"
+        app:layout_constraintEnd_toStartOf="@+id/result"
+        app:layout_constraintTop_toBottomOf="@+id/num1" />
+
+    <Button
+        android:id="@+id/btnSumar"
+        android:layout_width="0dp"
+        android:layout_height="54dp"
+        android:backgroundTint="#768AE0"
+        android:onClick="Calcular"
+        android:text="+"
+        android:textColor="#0A0A10"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btnRestar"
+        app:layout_constraintEnd_toStartOf="@+id/num2"
+        app:layout_constraintStart_toStartOf="@+id/textView3" />
+
+    <Button
+        android:id="@+id/btnMultiplicar"
+        android:layout_width="76dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="117dp"
+        android:layout_marginEnd="118dp"
+        android:backgroundTint="#768AE0"
+        android:onClick="Calcular"
+        android:text="x"
+        android:textColor="#0A0A10"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btnRestar"
+        app:layout_constraintEnd_toEndOf="@+id/result"
+        app:layout_constraintStart_toEndOf="@+id/textView3" />
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="29dp"
+        android:layout_marginEnd="22dp"
+        android:layout_marginBottom="31dp"
+        android:text="Resultado"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/btnDividir"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/num1"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
